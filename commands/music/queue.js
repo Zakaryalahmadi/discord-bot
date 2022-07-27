@@ -54,7 +54,7 @@ module.exports = class PlayCommand extends Command{
                 .setTitle(`File d'attente pour : ${message.author.username}`)
                 .setThumbnail(`${server.currentVideo.img}`)
                 
-                .addField("En train de jouer :",`[${server.currentVideo.title}]` + `(${server.currentVideo.url})`)
+                .addField("En train de jouer :",`[${server.currentVideo.title}]` + `(${server.currentVideo.url ? server.currentVideo.url : ""})`)
 
         if(queueLength > 0){
             let value = ""
